@@ -4,26 +4,41 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
+
+
     <style type="text/css">
         body {
-            padding: 1em;
+            padding: 0em;
+            margin:0;
             font-family: sans-serif;
             font-size: 16pt;
         }
 
         header h1 {
-            font: 20pt bold serif;
+            font: 25pt bold serif;
+            font-size: 4vw;
+            font-family: "Space Mono", sans-serif;
         }
         header h3 {
-            font: 15pt bold sans-serif;
+            font: 13pt bold sans-serif;
+            font-family: sans-serif;
+            font-size: 1.5vw;
         }
         header h2 {
-            font: 30pt bold sans-serif;
+            font: 50pt bold sans-serif;
+            font-family: 'Michroma', sans-serif;
+            font-size: 7vw;
         }
 
         article {
             display: grid;
             grid-template-columns: [content] 30em [sidebar] 20em [end];
+        }
+        article p {
+            background-color: white;
         }
         aside {
             grid-column: sidebar/end;
@@ -42,23 +57,57 @@
         }
 
         img {
-            width: 400px;
+            /*width: 400px;*/
         }
+
+        #header {
+            display: grid;
+            grid-template-rows:
+                    [book-title] 3em
+                    [sub-title] 10em
+                    [bottom] 40em
+                    [end]
+            ;
+            grid-template-columns:
+                    [start] 3em [gutter] 0.5fr [center] 1.5fr [end];
+            width: 100vw;
+
+            color: white;
+        }
+        #header p {
+            font-size: 4vw;
+            line-height: 2em;
+        }
+        #header p a {
+            color: white;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
 
 
-<header>
-    <h1>The Great Space Race</h1>
-    <h3>Chapter 5</h3>
-    <h2>Apollo 11</h2>
+<header id="header">
+    <img style="grid-row: book-title/end; grid-column: start/end; width:100%;" src="https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/s67-50531orig.jpg"/>
+    <h1 style="grid-row-start: book-title; grid-column: gutter/end; color: white;">The Great Space Race</h1>
+    <h3 style="grid-row-start: sub-title; grid-column: gutter/center">Chapter 5</h3>
+    <h2 style="grid-row-start: sub-title; grid-column: center/end">Apollo 11</h2>
+    <p  style="grid-row: bottom/end; grid-column: gutter/center">
+        Apollo 11 was the spaceflight that <a href="https://en.wikipedia.org/wiki/Moon_landing">landed</a> the first two humans on the Moon.
+    </p>
 </header>
+
+
+<hr/>
 <article>
 
     <p>
-        Apollo 11 was the spaceflight that <a href="https://en.wikipedia.org/wiki/Moon_landing">landed</a> the first two humans on the Moon. Mission commander <a href="https://en.wikipedia.org/wiki/Neil_Armstrong">Neil Armstrong</a> and pilot <a href="https://en.wikipedia.org/wiki/Buzz_Aldrin">Buzz Aldrin</a>, both American, landed the lunar module Eagle on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface six hours after landing on July 21 at 02:56:15 UTC; Aldrin joined him about 20 minutes later. They spent about two and a quarter hours together outside the spacecraft, and collected 47.5 pounds (21.5 kg) of lunar material to bring back to Earth. Michael Collins piloted the command module Columbia alone in lunar orbit while they were on the Moon's surface. Armstrong and Aldrin spent just under a day on the lunar surface before rejoining Columbia in lunar orbit.
-
+        Mission commander <a href="https://en.wikipedia.org/wiki/Neil_Armstrong">Neil Armstrong</a> and pilot <a href="https://en.wikipedia.org/wiki/Buzz_Aldrin">Buzz Aldrin</a>,
+        both American, landed the lunar module Eagle on July 20, 1969, at 20:18 UTC.
+        Armstrong became the first to step onto the lunar surface six hours after landing on July 21 at 02:56:15 UTC;
+        Aldrin joined him about 20 minutes later.
+        They spent about two and a quarter hours together outside the spacecraft, and collected 47.5 pounds (21.5 kg) of lunar material to bring back to Earth. Michael Collins piloted the command module Columbia alone in lunar orbit while they were on the Moon's surface. Armstrong and Aldrin spent just under a day on the lunar surface before rejoining Columbia in lunar orbit.
     </p>
 
     <aside class="images">
