@@ -15,6 +15,11 @@
             font-family: sans-serif;
             font-size: 16pt;
             line-height: 150%;
+            background-color: #ececec;
+        }
+
+        a {
+            color: red;
         }
     </style>
     <style type="text/css">
@@ -23,20 +28,18 @@
         #header {
             display: grid;
             grid-template-rows:
-                    [book-title] 3em
+                    [book-title] 4em
                     [sub-title] 10em
                     [bottom] 40em
                     [end]
         ;
             grid-template-columns:
-                    [start] 3em [gutter] 0.5fr [center] 1.5fr [end];
-            width: 100vw;
-
+                    [start] 4em [gutter] 0.5fr [center] 1.5fr [end];
             color: white;
             overflow: hidden;
         }
         #header p {
-            font-size: 4vw;
+            font-size: 1.8em;
             line-height: 2em;
         }
         #header p a {
@@ -45,19 +48,19 @@
         }
 
         header h1 {
-            font: 25pt bold serif;
-            font-size: 4vw;
+            font: 2em bold serif;
+            /*font-size: 4vw;*/
             font-family: "Space Mono", sans-serif;
         }
         header h3 {
             font: 13pt bold sans-serif;
             font-family: sans-serif;
-            font-size: 1.5vw;
+            /*font-size: 1.5vw;*/
         }
         header h2 {
-            font: 50pt bold sans-serif;
+            font: 4em bold sans-serif;
             font-family: 'Michroma', sans-serif;
-            font-size: 7vw;
+            /*font-size: 7vw;*/
         }
 
 
@@ -79,23 +82,29 @@
 
 <style type="text/css">
     article {
-        border: 1px dotted black;
         box-sizing: content-box;
         font-size: 100%;
         display: grid;
         grid-template-columns: [content]30em [gutter]5em [figures]10em;
-        background-color: aliceblue;
+        background-color: white;
         margin: 1em 4em;
+        padding-top: 2em;
     }
     section {
         grid-column: content;
     }
     section p {
-        padding: 1em;
+        padding: 1em 1em 1em 1em;
+        margin-top: 0;
     }
 
     aside {
         grid-column: figures;
+    }
+
+    figure {
+        margin:0;
+        padding-top: 1em;
     }
 
 </style>
@@ -120,14 +129,18 @@
     <aside class="images">
 
         <figure>
-            <img width="150"
+            <a href="https://upload.wikimedia.org/wikipedia/commons/0/0d/Neil_Armstrong_pose.jpg">
+            <img width="200"
                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Neil_Armstrong_pose.jpg/377px-Neil_Armstrong_pose.jpg" alt="Neil Armstrong"/>
             <figcaption>Neil Armstrong</figcaption>
+            </a>
         </figure>
         <figure>
-            <img width="150"
+            <a href="https://upload.wikimedia.org/wikipedia/commons/d/da/Aldrin.jpg">
+            <img width="200"
                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Aldrin.jpg/382px-Aldrin.jpg" alt="Buzz Aldrin"/>
             <figcaption>Buzz Aldrin</figcaption>
+            </a>
         </figure>
     </aside>
 
@@ -139,12 +152,16 @@
     </section>
     <aside class="3dmodel">
         <figure>
-            <img src="#" width="150" height="150"/>
+            <a href="./view-saturnv.html">
+            <img src="./images/saturnv_thumb.png" width="200" height="200"/>
             <figcaption>3d view of saturn v rocket</figcaption>
+            </a>
         </figure>
         <figure>
-            <img src="#" width="150" height="150"/>
-            <figcaption>3d view of lander</figcaption>
+            <a href="./view-lander.html" target="_blank">
+                <img src="./images/lander_thumb.png" width="200" height="200"/>
+                <figcaption>3d view of lander</figcaption>
+            </a>
         </figure>
     </aside>
 
@@ -164,8 +181,11 @@
 
 
     <aside>
-        <figure>  <video width="150"
-                src="https://upload.wikimedia.org/wikipedia/commons/1/19/AP11_FINAL_APPROACH.ogv"></video>
+        <figure>
+            <video width="200"
+                src="https://upload.wikimedia.org/wikipedia/commons/1/19/AP11_FINAL_APPROACH.ogv"
+                         controls
+            ></video>
             <figcaption>Final Approach</figcaption>
         </figure>
     </aside>
@@ -175,18 +195,17 @@
     </section>
 
     <aside class="photo-gallery">
+        <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/d/d5/Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg">
         <img class="thumb"
-             width="150"
+             width="200"
              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg/267px-Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg"/>
-        <!--<img class="full"-->
-             <!--width="150"-->
-             <!--src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Apollo_11_Lunar_Module_Eagle_in_landing_configuration_in_lunar_orbit_from_the_Command_and_Service_Module_Columbia.jpg"/>-->
+        </a>
+
+        <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/9/98/Aldrin_Apollo_11_original.jpg">
         <img class='thumb'
-             width="150"
+             width="200"
              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Aldrin_Apollo_11_original.jpg/239px-Aldrin_Apollo_11_original.jpg"/>
-        <!--<img class='full'-->
-             <!--width="150"-->
-             <!--src="https://upload.wikimedia.org/wikipedia/commons/9/98/Aldrin_Apollo_11_original.jpg"/>-->
+        </a>
     </aside>
 </article>
 
