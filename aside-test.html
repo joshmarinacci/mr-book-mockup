@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .grid {
+            width: 60em;
+            font-size: 100%;
+            display: grid;
+            grid-template-columns: [content]30em [gutter]5em [figures]10em;
+        }
+
+        .content {
+            grid-column: content;
+            border: 1px solid black;
+            border-width: 1px 0 0 0;
+        }
+        p {
+            line-height: 1.5em;
+            padding: 1em;
+        }
+
+        aside {
+            grid-column: figures;
+        }
+
+        .model-3d {
+            width: 10em;
+            border: 1px solid red;
+            min-height: 10em;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="grid">
+    <div class="content">
+    <p>
+        Mission commander <a href="https://en.wikipedia.org/wiki/Neil_Armstrong">Neil Armstrong</a> and pilot <a href="https://en.wikipedia.org/wiki/Buzz_Aldrin">Buzz Aldrin</a>,
+        both American, landed the lunar module Eagle on July 20, 1969, at 20:18 UTC.
+        Armstrong became the first to step onto the lunar surface six hours after landing on July 21 at 02:56:15 UTC;
+        Aldrin joined him about 20 minutes later.
+        They spent about two and a quarter hours together outside the spacecraft, and collected 47.5 pounds (21.5 kg) of lunar material to bring back to Earth. Michael Collins piloted the command module Columbia alone in lunar orbit while they were on the Moon's surface. Armstrong and Aldrin spent just under a day on the lunar surface before rejoining Columbia in lunar orbit.
+    </p>
+
+    <p>
+        Mission commander <a href="https://en.wikipedia.org/wiki/Neil_Armstrong">Neil Armstrong</a> and pilot <a href="https://en.wikipedia.org/wiki/Buzz_Aldrin">Buzz Aldrin</a>,
+        both American, landed the lunar module Eagle on July 20, 1969, at 20:18 UTC.
+        Armstrong became the first to step onto the lunar surface six hours after landing on July 21 at 02:56:15 UTC;
+        Aldrin joined him about 20 minutes later.
+        They spent about two and a quarter hours together outside the spacecraft, and collected 47.5 pounds (21.5 kg) of lunar material to bring back to Earth. Michael Collins piloted the command module Columbia alone in lunar orbit while they were on the Moon's surface. Armstrong and Aldrin spent just under a day on the lunar surface before rejoining Columbia in lunar orbit.
+    </p>
+    </div>
+
+    <aside class="images">
+
+        <figure>
+        <img width="150"
+             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Neil_Armstrong_pose.jpg/377px-Neil_Armstrong_pose.jpg" alt="Neil Armstrong"/>
+            <figcaption>Neil Armstrong</figcaption>
+        </figure>
+        <figure>
+        <img width="150"
+             src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Aldrin.jpg/382px-Aldrin.jpg" alt="Buzz Aldrin"/>
+            <figcaption>Buzz Aldrin</figcaption>
+        </figure>
+    </aside>
+
+    <div class="content">
+    <p>
+        Apollo 11 was launched by a <a href="https://en.wikipedia.org/wiki/Saturn_V">Saturn V</a> rocket from Kennedy Space Center in Merritt Island, Florida, on July 16 at 9:32 am EDT (13:32 UTC) and was the fifth manned mission of NASA's Apollo program. The Apollo spacecraft had three parts: a command module (CM) with a cabin for the three astronauts, and the only part that landed back on Earth; a service module (SM), which supported the command module with propulsion, electrical power, oxygen, and water; and a lunar module (LM) that had two stages – a lower stage for landing on the Moon, and an upper stage to place the astronauts back into lunar orbit.
+    </p>
+    </div>
+
+    <aside class="3dmodel">
+        <figure>
+            <img src="#" width="150" height="150"/>
+            <figcaption>3d view of saturn v rocket</figcaption>
+        </figure>
+    </aside>
+
+
+    <p>
+        After being sent toward the Moon by the Saturn V's upper stage, the astronauts separated the spacecraft from it and traveled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the lunar module Eagle and landed in the Sea of Tranquility. They stayed a total of about 21.5 hours on the lunar surface. The astronauts used Eagle's upper stage to lift off from the lunar surface and rejoin Collins in the command module. They jettisoned Eagle before they performed the maneuvers that blasted them out of lunar orbit on a trajectory back to Earth. They returned to Earth and landed in the Pacific Ocean on July 24.
+    </p>
+</div>
+
+</body>
+</html>
